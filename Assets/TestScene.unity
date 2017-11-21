@@ -123,7 +123,8 @@ GameObject:
   - component: {fileID: 146995198}
   - component: {fileID: 146995197}
   - component: {fileID: 146995196}
-  m_Layer: 8
+  - component: {fileID: 146995200}
+  m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -197,6 +198,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &146995200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 146995195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c20ae537ceca4525846dab9f09963eeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OpeningTime: 2
+--- !u!1 &643205384 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100002, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
+  m_PrefabInternal: {fileID: 1297138141}
+--- !u!114 &643205385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 643205384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a012a0e8771e47999f8dad8adaaf72ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Camera1: {fileID: 643205388}
+--- !u!20 &643205388 stripped
+Camera:
+  m_PrefabParentObject: {fileID: 2000000, guid: 5e9e851c0e142814dac026a256ba2ac0,
+    type: 2}
+  m_PrefabInternal: {fileID: 1297138141}
 --- !u!1 &779412730
 GameObject:
   m_ObjectHideFlags: 0
@@ -348,10 +382,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &831954973 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 400002, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
-  m_PrefabInternal: {fileID: 1297138141}
 --- !u!1001 &1297138141
 Prefab:
   m_ObjectHideFlags: 0
@@ -479,26 +509,3 @@ Transform:
   m_Father: {fileID: 146995199}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!1 &2047072424 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
-  m_PrefabInternal: {fileID: 1297138141}
---- !u!114 &2047072425
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2047072424}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e10ca0a5f2a79d44a4b586fa272fa72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeleft: 0
-  currentdoor: {fileID: 0}
-  open: 0
-  isOpeningDoor: 0
-  cam: {fileID: 831954973}
-  mask:
-    serializedVersion: 2
-    m_Bits: 256
