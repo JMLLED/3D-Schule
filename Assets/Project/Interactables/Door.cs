@@ -29,9 +29,9 @@ namespace Project.Interactables
 
         private void Update()
         {
-            openingTime -= Time.deltaTime;
             if (openingTime > 0)
             {
+                openingTime -= Time.deltaTime;
                 transform.localRotation = open ? Quaternion.Slerp(openedRotation, startingRotation, openingTime / OpeningTime) : Quaternion.Slerp(startingRotation, openedRotation, openingTime / OpeningTime);
             }
         }
