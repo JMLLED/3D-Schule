@@ -12,7 +12,6 @@ namespace Project.Interactables
         private float openingTime;
 
 
-
         public void Interact()
         {
             if (openingTime > 0) return;
@@ -32,7 +31,10 @@ namespace Project.Interactables
             if (openingTime > 0)
             {
                 openingTime -= Time.deltaTime;
-                transform.localRotation = open ? Quaternion.Slerp(openedRotation, startingRotation, openingTime / OpeningTime) : Quaternion.Slerp(startingRotation, openedRotation, openingTime / OpeningTime);
+                transform.localRotation =
+                    open
+                        ? Quaternion.Slerp(openedRotation, startingRotation, openingTime / OpeningTime)
+                        : Quaternion.Slerp(startingRotation, openedRotation, openingTime / OpeningTime);
             }
         }
     }
