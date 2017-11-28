@@ -4,7 +4,7 @@ namespace Project.Player
 {
     public class Interact : MonoBehaviour
     {
-        public float MaxDistance;
+        public float MaxDistance = 3;
 
         // Update is called once per frame
         public void Update()
@@ -15,7 +15,7 @@ namespace Project.Player
 
                 if (Physics.Raycast(transform.position, transform.forward, out hit, MaxDistance))
                 {
-                    hit.transform.GetComponent<IInteractable>().Interact();
+                    hit.transform.GetComponent<IInteractable>()?.Interact();
                 }
             }
         }
