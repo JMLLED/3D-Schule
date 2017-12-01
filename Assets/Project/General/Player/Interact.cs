@@ -7,7 +7,7 @@ namespace Project.Player
         public float MaxDistance = 3;
 
         // Update is called once per frame
-        public void Update()
+        private void Update()
         {
             if (Input.GetButtonDown("Interact"))
             {
