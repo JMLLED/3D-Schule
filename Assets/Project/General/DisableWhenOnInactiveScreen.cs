@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Project
+namespace Project.General
 {
     public class DisableWhenOnInactiveScreen : MonoBehaviour
     {

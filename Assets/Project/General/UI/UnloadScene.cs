@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Project.UI
+namespace Project.General.UI
 {
     /// <summary>
     /// Unloads its scene when interacted

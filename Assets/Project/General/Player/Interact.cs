@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Project.Player
+namespace Project.General.Player
 {
     public class Interact : MonoBehaviour
     {

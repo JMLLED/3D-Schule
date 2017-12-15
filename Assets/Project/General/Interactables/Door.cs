@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Project.Interactables
+namespace Project.General.Interactables
 {
     public class Door : MonoBehaviour, IInteractable
     {

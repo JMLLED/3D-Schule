@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Project.Interactables
+namespace Project.General.Interactables
 {
     public class SceneLoader : MonoBehaviour, IInteractable
     {
