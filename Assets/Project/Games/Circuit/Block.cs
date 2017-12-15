@@ -1,13 +1,21 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.UI;
 
-namespace Project.Games.Stromkreis
+namespace Project.Games.Circuit
 {
     public abstract class Block : MonoBehaviour
     {
         public Block Up, Down, Left, Right;
 
+        public Sprite UnlitSprite, LitSprite;
+
         public abstract Direction[] GetPathsFor(Direction dir);
+
+        public bool Lit
+        {
+            set { gameObject.GetComponent<Image>().sprite = value ? LitSprite : UnlitSprite; }
+        }
 
         public Block GetBlock(Direction dir)
         {
@@ -25,13 +33,18 @@ namespace Project.Games.Stromkreis
                     throw new ArgumentOutOfRangeException(nameof(dir), dir, null);
             }
         }
+
+        public void Rotate()
+        {
+            transform.Rotate(Vector3.forward * 90);
+        }
     }
 
     public enum Direction
     {
-        Up    = 1,
+        Up     = 1,
         Right  = 2,
-        Down  = 3,
-        Left = 4
+        Down   = 3,
+        Left   = 4
     }
 }

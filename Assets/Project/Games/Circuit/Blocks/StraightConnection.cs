@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Project.Games.Stromkreis
+namespace Project.Games.Circuit.Blocks
 {
     public class StraightConnection : Block
     {
