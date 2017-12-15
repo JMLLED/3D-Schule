@@ -26,8 +26,9 @@ namespace Project.Games.Circuit
             var rows = levelFile.text.Split('\n');
             int width = rows[0].Split(',').Length, height = rows.Length;
 
-            playfieldContainer = Instantiate(new GameObject("Playfield", typeof(RectTransform)), transform);
+            playfieldContainer = Instantiate(new GameObject(string.Empty, typeof(RectTransform)), transform);
             playfieldContainer.GetComponent<RectTransform>().localPosition = new Vector3(-width, -height) / 2 * block_size;
+            playfieldContainer.name = "Playfield";
 
             blocks = new Block[width,height];
 
@@ -39,6 +40,7 @@ namespace Project.Games.Circuit
                     blocks[j, i] = Instantiate(BlockTypes[int.Parse(row[j])], playfieldContainer.transform);
                     blocks[j, i].GetComponent<RectTransform>().localPosition = new Vector2(j, i) * block_size;
                     blocks[j, i].GetComponent<RectTransform>().Rotate(Vector3.back, 90 * Random.Range(0,3));
+                    blocks[j, i].name = "Block " + j + "-" + i;
                 }
             }
 
@@ -47,13 +49,13 @@ namespace Project.Games.Circuit
             {
                 var block = blocks[i, j];
                 if (i > 0)
-                    block.Left  = blocks[i - 1, j];
+                    block.Left = blocks[i - 1, j];
                 if (i < blocks.GetLength(0) - 1)
-                    block.Right = blocks[i + 1, j];
+                    block.Right  = blocks[i + 1, j];
                 if (j > 0)
-                    block.Up    = blocks[i, j - 1];
-                if (j > blocks.GetLength(1) - 1)
-                    block.Down  = blocks[i, j + 1];
+                    block.Down  = blocks[i, j - 1];
+                if (j < blocks.GetLength(1) - 1)
+                    block.Up    = blocks[i, j + 1];
             }
         }
     }
