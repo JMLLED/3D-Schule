@@ -42,9 +42,22 @@ namespace Project.Games.Circuit
 
     public enum Direction
     {
-        Up     = 1,
-        Right  = 2,
-        Down   = 3,
-        Left   = 4
+        Up     = 0,
+        Right  = 1,
+        Down   = 2,
+        Left   = 3
+    }
+
+    public static class DirectionExtensions
+    {
+        public static Direction Invert(this Direction dir)
+        {
+            return (Direction)(((int)dir + 2) % 4);
+        }
+
+        public static Direction RotateBy(this Direction dir, int rotation)
+        {
+            return (Direction)Math.IEEERemainder((int)(dir + (rotation / 90)), 4);
+        }
     }
 }

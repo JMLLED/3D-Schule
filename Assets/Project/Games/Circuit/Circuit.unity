@@ -497,3 +497,6 @@ MonoBehaviour:
   - {fileID: 4900000, guid: 103b061562900564eb762c8c8dc9e201, type: 3}
   BlockTypes:
   - {fileID: 114674457112941774, guid: eb13e1ae0801b3245b68e71cc831f2c3, type: 2}
+  - {fileID: 114866659723346332, guid: 794fb863a703d01419d56d328edfa651, type: 2}
+  - {fileID: 114524386995010404, guid: 78499f43506875d4583a8cbbde776297, type: 2}
+  - {fileID: 114261846967004558, guid: 1113d1a952e58814c9eea660b692cca5, type: 2}
