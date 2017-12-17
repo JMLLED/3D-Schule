@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 224686738489092832}
   - component: {fileID: 222115716065948992}
   - component: {fileID: 114754850633730598}
-  - component: {fileID: 114261846967004558}
   - component: {fileID: 114822251714205540}
+  - component: {fileID: 114426157807869922}
   m_Layer: 5
   m_Name: CrossJunction
   m_TagString: Untagged
@@ -30,7 +30,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &114261846967004558
+--- !u!114 &114426157807869922
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -38,7 +38,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1107482549616898}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf54558c74b9482db90b94521ca3cbf2, type: 3}
+  m_Script: {fileID: 11500000, guid: 03400d7bcc2749e2ae9f5ea93e64951b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Up: {fileID: 0}
@@ -90,7 +90,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114261846967004558}
+        - m_Target: {fileID: 114426157807869922}
           m_MethodName: Rotate
           m_Mode: 1
           m_Arguments:

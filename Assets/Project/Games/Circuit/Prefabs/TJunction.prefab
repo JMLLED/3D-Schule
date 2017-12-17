@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 224697019566410496}
   - component: {fileID: 222582761448135032}
   - component: {fileID: 114534690238690978}
-  - component: {fileID: 114524386995010404}
   - component: {fileID: 114807960459769204}
+  - component: {fileID: 114277993759703418}
   m_Layer: 5
   m_Name: TJunction
   m_TagString: Untagged
@@ -30,7 +30,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &114524386995010404
+--- !u!114 &114277993759703418
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -38,7 +38,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1370977934255936}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf54558c74b9482db90b94521ca3cbf2, type: 3}
+  m_Script: {fileID: 11500000, guid: eb53dab484e943fb9e564b4ffd45f88d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Up: {fileID: 0}
@@ -90,7 +90,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114524386995010404}
+        - m_Target: {fileID: 114277993759703418}
           m_MethodName: Rotate
           m_Mode: 1
           m_Arguments:

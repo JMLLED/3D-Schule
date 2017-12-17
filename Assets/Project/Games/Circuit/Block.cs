@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,7 +12,13 @@ namespace Project.Games.Circuit
 
         public Sprite UnlitSprite, LitSprite;
 
-        public abstract Direction[] GetPathsFor(Direction dir);
+        protected abstract IEnumerable<Direction> GetConnectionsFrom(Direction dir);
+
+        public IEnumerable<Direction> GetPossiblePaths(Direction dir)
+        {
+            var rotation = (int)transform.rotation.eulerAngles.z;
+            return GetConnectionsFrom(dir.RotateBy(-rotation)).Select(direction => direction.RotateBy(rotation));
+        }
 
         public bool Lit
         {
@@ -36,7 +44,7 @@ namespace Project.Games.Circuit
 
         public void Rotate()
         {
-            transform.Rotate(Vector3.forward * 90);
+            transform.Rotate(Vector3.back * 90);
         }
     }
 
@@ -57,7 +65,7 @@ namespace Project.Games.Circuit
 
         public static Direction RotateBy(this Direction dir, int rotation)
         {
-            return (Direction)Math.IEEERemainder((int)(dir + (rotation / 90)), 4);
+            return (Direction)(((int)dir + 4 + rotation / 90) % 4);
         }
     }
 }

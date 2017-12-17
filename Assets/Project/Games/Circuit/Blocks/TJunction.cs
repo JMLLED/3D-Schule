@@ -1,13 +1,14 @@
-﻿using System;
+﻿using System.Collections.Generic;
+
 // ReSharper disable InconsistentNaming
 
 namespace Project.Games.Circuit.Blocks
 {
     public class TJunction : Block
     {
-        public override Direction[] GetPathsFor(Direction dir)
+        protected override IEnumerable<Direction> GetConnectionsFrom(Direction dir)
         {
-            switch (dir.RotateBy((int)transform.rotation.eulerAngles.z))
+            switch (dir)
             {
                 case Direction.Up:
                     return new[] { Direction.Right, Direction.Down };
