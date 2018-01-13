@@ -179,7 +179,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Testen
+  m_Text: "N\xE4chstes Level"
 --- !u!222 &435860834
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -468,19 +468,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1295683138}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114704552417414440, guid: 20e5e2576fd093e4f8bf54d4196fa67d,
-          type: 2}
-        m_MethodName: FindPath
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1295683138
@@ -693,6 +681,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelFiles:
   - {fileID: 4900000, guid: 103b061562900564eb762c8c8dc9e201, type: 3}
+  - {fileID: 4900000, guid: a8affaf868ac4cbca582c69e9b375297, type: 3}
+  - {fileID: 4900000, guid: 3496f734a5c442a487d921a41cc97180, type: 3}
+  Button: {fileID: 1295683137}
   BlockTypes:
   - {fileID: 114674457112941774, guid: eb13e1ae0801b3245b68e71cc831f2c3, type: 2}
   - {fileID: 114570971613412020, guid: 794fb863a703d01419d56d328edfa651, type: 2}
@@ -700,3 +691,4 @@ MonoBehaviour:
   - {fileID: 114426157807869922, guid: 1113d1a952e58814c9eea660b692cca5, type: 2}
   - {fileID: 114704552417414440, guid: 20e5e2576fd093e4f8bf54d4196fa67d, type: 2}
   - {fileID: 114884422238817238, guid: c68a7bae28f1f3f489b5b53774c560a6, type: 2}
+  - {fileID: 114245604130876884, guid: 8d740f54a75b31048baff6cc3dbcd6b2, type: 2}

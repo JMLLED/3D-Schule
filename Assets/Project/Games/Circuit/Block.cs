@@ -12,12 +12,14 @@ namespace Project.Games.Circuit
 
         public Sprite UnlitSprite, LitSprite;
 
+        public Action OnRotation;
+
         protected abstract IEnumerable<Direction> GetConnectionsFrom(Direction dir);
 
         public IEnumerable<Direction> GetPossiblePaths(Direction dir)
         {
             var rotation = (int)transform.rotation.eulerAngles.z;
-            return GetConnectionsFrom(dir.RotateBy(-rotation)).Select(direction => direction.RotateBy(rotation));
+            return GetConnectionsFrom(dir.RotateBy(rotation)).Select(direction => direction.RotateBy(-rotation));
         }
 
         public bool Lit
@@ -45,6 +47,7 @@ namespace Project.Games.Circuit
         public void Rotate()
         {
             transform.Rotate(Vector3.back * 90);
+            OnRotation();
         }
     }
 
