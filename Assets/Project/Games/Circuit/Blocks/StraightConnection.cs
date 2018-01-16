@@ -1,12 +1,11 @@
-﻿using System;
+﻿using System.Collections.Generic;
 
-namespace Project.Games.Stromkreis
+namespace Project.Games.Circuit.Blocks
 {
     public class StraightConnection : Block
     {
-        public override Direction[] GetPathsFor(Direction dir)
+        protected override IEnumerable<Direction> GetConnectionsFrom(Direction dir)
         {
-            dir = (Direction)Math.IEEERemainder((int)(dir + (int) (transform.rotation.eulerAngles.z / 90)), 4);
             switch (dir)
             {
                 case Direction.Up:
