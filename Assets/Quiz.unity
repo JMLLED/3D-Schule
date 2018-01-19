@@ -461,13 +461,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a70db2dc3bc7394409a87a8796e4fd33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frage:
-  - Question: Ist Maik hier?
+  Frage:
+  - Question: 1
+    Answer: 1
+  - Question: 2
     Answer: 0
-  - Question: ftuniu
+  - Question: 3
     Answer: 1
-  - Question: uktzktz
-    Answer: 1
+  - Question: 4
+    Answer: 0
   Text: {fileID: 335668465}
 --- !u!4 &721110074
 Transform:

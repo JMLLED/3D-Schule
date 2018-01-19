@@ -7,40 +7,40 @@ namespace Project.Games.Quiz
 {
     public class Quiz : MonoBehaviour
     {
-        private PolarQuestion current;
+        private PolarQuestion Current;
         public PolarQuestion[] Frage;
-        private  List<PolarQuestion> unanswered;
+        private  List<PolarQuestion> Unanswered;
         public Text Text;
 
         private void RandomQuestion()
         {
-            if (unanswered.Count != 0)
+            if (Unanswered.Count != 0)
             {
-                int temp = Random.Range(0, unanswered.Count);
-                current = unanswered[temp];
-                Text.text = current.Question;
-                unanswered.RemoveAt(temp);
+                int temp = Random.Range(0, Unanswered.Count);
+                Current = Unanswered[temp];
+                Text.text = Current.Question;
+                Unanswered.RemoveAt(temp);
             }
             else
             {
-                current = null;
+                Current = null;
             }
         }
 
         public void Start()
         {
-            if (unanswered == null || unanswered.Count == 0)
+            if (Unanswered == null || Unanswered.Count == 0)
             {
-                unanswered = Frage.ToList();
+                Unanswered = Frage.ToList();
             }
             RandomQuestion();
         }
 
         public void True()
         {
-            if (current != null)
+            if (Current != null)
             {
-                Debug.Log(current.Answer ? "Richtig" : "Falsch");
+                Debug.Log(Current.Answer ? "Richtig" : "Falsch");
                 RandomQuestion();
             }
             else
@@ -51,9 +51,9 @@ namespace Project.Games.Quiz
 
         public void False()
         {
-            if (current != null)
+            if (Current != null)
             {
-                Debug.Log(current.Answer ? "Falsch" : "Richtig");
+                Debug.Log(Current.Answer ? "Falsch" : "Richtig");
                 RandomQuestion();
             }
             else
