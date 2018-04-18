@@ -7,7 +7,7 @@ namespace Project.Games.Indicator
     {
         public void Update ()
         {
-            double ph = GetPHValue();
+            double ph = GetPhValue();
             Color color;
             if(ph < 3) color = Color.red;
             else if(ph < 6) color = Color.yellow;
@@ -18,19 +18,31 @@ namespace Project.Games.Indicator
             transform.GetComponent<Image>().color = color;
         }
 
-        private double GetPHValue() => Time.time % 14;
+        private double GetPhValue() => RectOverlaps(GetComponent<RectTransform>(), PhObjectSprite) ? PhValue : 7;
+
+        public RectTransform PhObjectSprite;
+
+        internal double PhValue;
+
+        private Vector2? lastPosition;
 
         public void OnMouseDrag()
         {
+            Vector2 mousePosition = Input.mousePosition;
+            var delta = mousePosition - (lastPosition ?? mousePosition);
 
-            Vector2 delta = new Vector2(Input.GetAxisRaw("Mouse X"),Input.GetAxisRaw("Mouse Y"))*15f;
+            // ReSharper disable once RedundantCast
+            transform.position += (Vector3)delta;
 
-            Vector2 position = transform.position;
-            position.x += delta.x;
-            position.y += delta.y;
-            transform.position = position;
+            lastPosition = mousePosition;
+        }
 
-            Debug.Log(position);
+        private static bool RectOverlaps(RectTransform rectTrans1, RectTransform rectTrans2)
+        {
+            Rect rect1 = new Rect(rectTrans1.localPosition.x, rectTrans1.localPosition.y, rectTrans1.rect.width, rectTrans1.rect.height);
+            Rect rect2 = new Rect(rectTrans2.localPosition.x, rectTrans2.localPosition.y, rectTrans2.rect.width, rectTrans2.rect.height);
+
+            return rect1.Overlaps(rect2);
         }
     }
 }
