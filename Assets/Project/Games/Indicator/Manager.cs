@@ -24,8 +24,9 @@ namespace Project.Games.Indicator
             possiblePhObjects.Remove(nextPhObject);
 
             SpriteObject.sprite = nextPhObject.Sprite;
-            SpriteObject.GetComponent<RectTransform>().sizeDelta = new Vector2(nextPhObject.Sprite.texture.width,
-                nextPhObject.Sprite.texture.height);
+            var size = new Vector2(nextPhObject.Sprite.texture.width, nextPhObject.Sprite.texture.height);
+            SpriteObject.GetComponent<RectTransform>().sizeDelta = size;
+            SpriteObject.GetComponent<BoxCollider2D>().size = size;
 
             Indicator.PhValue = nextPhObject.PhValue;
         }

@@ -5,22 +5,25 @@ namespace Project.Games.Indicator
 {
     public class Indicator : MonoBehaviour
     {
+        public Image ColorImage;
+
         public void Update ()
         {
-            double ph = GetPhValue();
+            double? ph = GetPhValue();
             Color color;
             if(ph < 3) color = Color.red;
             else if(ph < 6) color = Color.yellow;
             else if(ph < 8) color = Color.green;
             else if(ph < 11) color = Color.blue;
-            else color = Color.magenta;
+            else if(ph >= 11) color = Color.magenta;
+            else color = new Color(0,0,0,0);
 
-            transform.GetComponent<Image>().color = color;
+            ColorImage.color = color;
         }
 
-        private double GetPhValue() => RectOverlaps(GetComponent<RectTransform>(), PhObjectSprite) ? PhValue : 7;
+        private double? GetPhValue() => GetComponent<Collider2D>().Distance(PhObjectSprite).isOverlapped ? (double?) PhValue : null;
 
-        public RectTransform PhObjectSprite;
+        public Collider2D PhObjectSprite;
 
         internal double PhValue;
 
@@ -35,14 +38,6 @@ namespace Project.Games.Indicator
             transform.position += (Vector3)delta;
 
             lastPosition = mousePosition;
-        }
-
-        private static bool RectOverlaps(RectTransform rectTrans1, RectTransform rectTrans2)
-        {
-            Rect rect1 = new Rect(rectTrans1.localPosition.x, rectTrans1.localPosition.y, rectTrans1.rect.width, rectTrans1.rect.height);
-            Rect rect2 = new Rect(rectTrans2.localPosition.x, rectTrans2.localPosition.y, rectTrans2.rect.width, rectTrans2.rect.height);
-
-            return rect1.Overlaps(rect2);
         }
     }
 }
