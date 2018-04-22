@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.574817, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -342,8 +342,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 661196564}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 369.5, y: 218, z: 0}
-  m_LocalScale: {x: 0.4037037, y: 0.4037037, z: 0.4037037}
+  m_LocalPosition: {x: 475.5, y: 267.5, z: 0}
+  m_LocalScale: {x: 0.49537036, y: 0.49537036, z: 0.49537036}
   m_Children:
   - {fileID: 733247759}
   - {fileID: 1403950082}
@@ -463,7 +463,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Frage:
-  - Question: dwadw
+  - Question: "Luft besteht gr\xF6\xDFtenteils aus Stickstoff"
     Answer: 1
   - Question: rdgdrg
     Answer: 0

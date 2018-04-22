@@ -8,5 +8,7 @@ namespace Project.Games.Indicator
     {
         public double PhValue;
         public Sprite Sprite;
+        public string Name;
+        public string AcidName;
     }
 }

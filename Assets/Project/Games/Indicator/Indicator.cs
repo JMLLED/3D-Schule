@@ -7,18 +7,10 @@ namespace Project.Games.Indicator
     {
         public Image ColorImage;
 
-        public void Update ()
+        public void Update()
         {
             double? ph = GetPhValue();
-            Color color;
-            if(ph < 3) color = Color.red;
-            else if(ph < 6) color = Color.yellow;
-            else if(ph < 8) color = Color.green;
-            else if(ph < 11) color = Color.blue;
-            else if(ph >= 11) color = Color.magenta;
-            else color = new Color(0,0,0,0);
-
-            ColorImage.color = color;
+            ColorImage.color = ph == null ? Color.clear : Manager.GetPhValue(ph.Value).Color;
         }
 
         private double? GetPhValue() => GetComponent<Collider2D>().Distance(PhObjectSprite).isOverlapped ? (double?) PhValue : null;
@@ -34,10 +26,14 @@ namespace Project.Games.Indicator
             Vector2 mousePosition = Input.mousePosition;
             var delta = mousePosition - (lastPosition ?? mousePosition);
 
-            // ReSharper disable once RedundantCast
-            transform.position += (Vector3)delta;
+            GetComponent<RectTransform>().anchoredPosition += delta;
 
             lastPosition = mousePosition;
+        }
+
+        public void OnMouseDragEnd()
+        {
+            lastPosition = null;
         }
     }
 }
