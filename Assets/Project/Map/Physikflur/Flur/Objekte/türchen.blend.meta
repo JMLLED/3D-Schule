@@ -1,7 +1,5 @@
 fileFormatVersion: 2
-guid: 95058a6b3a5e714439f3b03f337bf5d3
-timeCreated: 1516121482
-licenseType: Free
+guid: 5986d62765c04494180eb9df7175d524
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -33,6 +31,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -57,6 +56,8 @@ ModelImporter:
     optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
