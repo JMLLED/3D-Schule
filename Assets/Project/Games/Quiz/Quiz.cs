@@ -11,7 +11,7 @@ namespace Project.Games.Quiz
 {
     public class Quiz : MonoBehaviour
     {
-        private PolarQuestion Current;
+        private PolarQuestion current;
         public PolarQuestion[] Frage;
         private List<PolarQuestion> unanswered;
         public Text Text;
@@ -21,12 +21,12 @@ namespace Project.Games.Quiz
 
         private void RandomQuestion()
         {
-            if (Unanswered.Count != 0)
+            if (unanswered.Count != 0)
             {
-                int temp = Random.Range(0, Unanswered.Count);
-                Current = Unanswered[temp];
-                Text.text = Current.Question;
-                Unanswered.RemoveAt(temp);
+                int temp = Random.Range(0, unanswered.Count);
+                current = unanswered[temp];
+                Text.text = current.Question;
+                unanswered.RemoveAt(temp);
             }
             else
             {
@@ -37,9 +37,9 @@ namespace Project.Games.Quiz
 
         public void Start()
         {
-            if (Unanswered == null || Unanswered.Count == 0)
+            if (unanswered == null || unanswered.Count == 0)
             {
-                Unanswered = Frage.ToList();
+                unanswered = Frage.ToList();
             }
             RandomQuestion();
 
