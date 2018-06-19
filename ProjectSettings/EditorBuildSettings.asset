@@ -11,3 +11,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/TestUIScene.unity
     guid: c92004b1009658548ae008b01aa05f0f
+  - enabled: 1
+    path: Assets/Schule.unity
+    guid: 800e5dbb37552994d93917922ee3a770
+  - enabled: 1
+    path: Assets/Project/Games/Circuit/Circuit.unity
+    guid: 96be36be24c544d4fb237b2236b29ae5
+  - enabled: 1
+    path: Assets/Project/Games/CountryQuiz/CountryQuiz.unity
+    guid: 8cd11480a455a12468ac351ec6e9680c
+  - enabled: 1
+    path: Assets/Project/Games/Indicator/Indicator.unity
+    guid: 9bada02774233d547b16fb340ea068b3
+  - enabled: 1
+    path: Assets/Project/Games/Quiz/Quiz.unity
+    guid: 90b678c22d30d0f429800aa7d77927ce
+  m_configObjects: {}
