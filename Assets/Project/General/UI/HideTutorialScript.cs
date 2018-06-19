@@ -10,9 +10,9 @@ namespace Project.General.UI
         private IEnumerator Start()
         {
             yield return new WaitForEndOfFrame();
-            Tutorial.transform.SetAsLastSibling();
+            Tutorial.transform.SetAsLastSibling(); //Das Tutorial ist das oberste und versteckt alles hinter sich
         }
 
-        public void HideTutorial() => Tutorial.SetActive(false);
+        public void HideTutorial() => Tutorial.SetActive(false); //Das Tutorial wird deaktiviert und unsichtbar
     }
 }

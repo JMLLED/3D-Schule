@@ -22,7 +22,7 @@ namespace Project.Games.Circuit
             return GetConnectionsFrom(dir.RotateBy(rotation)).Select(direction => direction.RotateBy(-rotation));
         }
 
-        public bool Lit
+        public bool Lit //Ändert die Textur für den richtigen Weg
         {
             set { gameObject.GetComponent<Image>().sprite = value ? LitSprite : UnlitSprite; }
         }
@@ -44,7 +44,7 @@ namespace Project.Games.Circuit
             }
         }
 
-        public void Rotate()
+        public void Rotate() //Rotiert den Block
         {
             transform.Rotate(Vector3.back * 90);
             OnRotation();
@@ -61,12 +61,12 @@ namespace Project.Games.Circuit
 
     public static class DirectionExtensions
     {
-        public static Direction Invert(this Direction dir)
+        public static Direction Invert(this Direction dir) //Invertiert die Richtung
         {
             return (Direction)(((int)dir + 2) % 4);
         }
 
-        public static Direction RotateBy(this Direction dir, int rotation)
+        public static Direction RotateBy(this Direction dir, int rotation) //Gibt die rotierte Richtung zurück
         {
             return (Direction)(((int)dir + 4 + rotation / 90) % 4);
         }

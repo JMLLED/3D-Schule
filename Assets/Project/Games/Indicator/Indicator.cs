@@ -13,7 +13,7 @@ namespace Project.Games.Indicator
             ColorImage.color = ph == null ? Color.clear : Manager.GetPhValue(ph.Value).Color;
         }
 
-        private double? GetPhValue() => GetComponent<Collider2D>().Distance(PhObjectSprite).isOverlapped ? (double?) PhValue : null;
+        private double? GetPhValue() => GetComponent<Collider2D>().Distance(PhObjectSprite).isOverlapped ? (double?) PhValue : null; //Überprüft ob der indikator über dem Objekt ist und falls ja gibt er den richtigen PH-Wert zurück
 
         public Collider2D PhObjectSprite;
 
@@ -24,7 +24,7 @@ namespace Project.Games.Indicator
         public void OnMouseDrag()
         {
             Vector2 mousePosition = Input.mousePosition;
-            var delta = mousePosition - (lastPosition ?? mousePosition);
+            var delta = mousePosition - (lastPosition ?? mousePosition); //Rechne aus wie die Mausposition sich verändert hat und bewegen den Indikator entsprechend
 
             GetComponent<RectTransform>().anchoredPosition += delta;
 

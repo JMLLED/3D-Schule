@@ -6,16 +6,15 @@ namespace Project.General.Player
     {
         public float MaxDistance = 3;
 
-        // Update is called once per frame
         private void Update()
         {
-            if (Input.GetButtonDown("Interact"))
+            if (Input.GetButtonDown("Interact")) //Wenn die "Interagieren"-Taste gedrückt wurde
             {
                 RaycastHit hit;
 
-                if (Physics.Raycast(transform.position, transform.forward, out hit, MaxDistance))
+                if (Physics.Raycast(transform.position, transform.forward, out hit, MaxDistance)) //Wird ein "Raycast" gemacht um zu schauen, mit was man interagiert hat
                 {
-                    hit.transform.GetComponent<IInteractable>()?.Interact();
+                    hit.transform.GetComponent<IInteractable>()?.Interact(); //Sollte man mit einem GameObject interagiert haben, welches das IInteractable interface hat wird Interact() ausgeführt
                 }
             }
         }

@@ -7,17 +7,17 @@ namespace Project.General.Interactables
     {
         public string Scene;
 
-        public void Interact()
+        public void Interact() //Beim Interagieren wird die angegebene Szene geöffnet
         {
             SceneManager.LoadScene(Scene, LoadSceneMode.Additive);
             SceneManager.sceneLoaded += SceneManagerOnSceneLoaded;
         }
 
-        private void SceneManagerOnSceneLoaded(Scene scene, LoadSceneMode loadSceneMode)
+        private void SceneManagerOnSceneLoaded(Scene scene, LoadSceneMode loadSceneMode) //Wenn die Szene geladen wurde
         {
             if (scene.name == Scene)
             {
-                SceneManager.SetActiveScene(scene);
+                SceneManager.SetActiveScene(scene); //Wird sie "aktiv" gemacht, damit sie im Vordergrund ist
                 SceneManager.sceneLoaded -= SceneManagerOnSceneLoaded;
             }
         }

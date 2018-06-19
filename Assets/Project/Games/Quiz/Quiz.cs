@@ -19,19 +19,19 @@ namespace Project.Games.Quiz
         public GameObject FalseButton;
 
 
-        private void RandomQuestion()
+        private void RandomQuestion() //Wählt eine zufällige Frage aus
         {
-            if (unanswered.Count != 0)
+            if (unanswered.Count != 0) //Falls es noch Fragen gibt
             {
-                int temp = Random.Range(0, unanswered.Count);
+                int temp = Random.Range(0, unanswered.Count); //Wähle eine zufällige aus und entferne sie von den möglichen
                 current = unanswered[temp];
-                Text.text = current.Question;
+                Text.text = current.Question; //Aktualisiere den Text
                 unanswered.RemoveAt(temp);
             }
-            else
+            else //Falls nicht
             {
                 current = null;
-                SceneManager.UnloadSceneAsync(gameObject.scene);
+                SceneManager.UnloadSceneAsync(gameObject.scene); //Entlade die Szene
             }
         }
 
@@ -39,9 +39,9 @@ namespace Project.Games.Quiz
         {
             if (unanswered == null || unanswered.Count == 0)
             {
-                unanswered = Frage.ToList();
+                unanswered = Frage.ToList(); //Speichere alle Fragen ob um mögliche auszuwählen
             }
-            RandomQuestion();
+            RandomQuestion(); //Wähle eine zufällige erste Frage aus
 
         }
 
@@ -50,7 +50,7 @@ namespace Project.Games.Quiz
         {
             if (current == null) return;
 
-            StartCoroutine(NextQuestion(current.Answer));
+            StartCoroutine(NextQuestion(current.Answer)); //Starte eine Coroutine und übergebe, ob der Spieler richtig war
 
         }
 
@@ -59,20 +59,20 @@ namespace Project.Games.Quiz
         {
             if (current == null) return;
 
-            StartCoroutine(NextQuestion(!current.Answer));
+            StartCoroutine(NextQuestion(!current.Answer)); //Starte eine Coroutine und übergebe, ob der Spieler richtig war
         }
 
         private IEnumerator NextQuestion(bool rightAnswer)
         {
-            Vector2 center = Vector2.Lerp(TrueButton.transform.position, FalseButton.transform.position, 0.5f);
+            Vector2 center = Vector2.Lerp(TrueButton.transform.position, FalseButton.transform.position, 0.5f); //Rechne das Zentrum aus, um dort das Ergebnis zu platzieren
             Vector2 oldPos;
 
             current = null;
 
             if (rightAnswer)
             {
-                FalseButton.SetActive(false);
-                oldPos = TrueButton.transform.position;
+                FalseButton.SetActive(false); //Wenn die Frage richtig beantwortet wurde wird der "Falsch" Knopf ausgeblendet
+                oldPos = TrueButton.transform.position; //Und der "Richtig" Knopf in die Mitte bewegt
                 TrueButton.transform.position = center;
             }
             else
@@ -82,9 +82,9 @@ namespace Project.Games.Quiz
                 FalseButton.transform.position = center;
             }
 
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(2); //Warte zwei Sekunden
 
-            if (rightAnswer)
+            if (rightAnswer) //Setze die Animation zurück
             {
                 FalseButton.SetActive(true);
                 TrueButton.transform.position = oldPos;
@@ -95,7 +95,7 @@ namespace Project.Games.Quiz
                 FalseButton.transform.position = oldPos;
             }
 
-            RandomQuestion();
+            RandomQuestion(); //Wähle am Schluss die neue Frage aus
         }
     }
 }
