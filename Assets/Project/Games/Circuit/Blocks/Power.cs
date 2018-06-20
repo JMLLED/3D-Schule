@@ -41,7 +41,7 @@ namespace Project.Games.Circuit.Blocks
                 return FindPath(possibleBlocks[possibleBlock].Invert(), possibleBlock, newAlreadyVisited); //Und versuche dann einen weiteren Weg
             });
 
-            return possiblePaths.OrderBy(list => list.Count); //.FirstOrDefault();
+            return possiblePaths.OrderBy(list => list.Count);
         }
     }
 }
