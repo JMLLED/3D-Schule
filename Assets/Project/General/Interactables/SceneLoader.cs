@@ -16,7 +16,6 @@ namespace Project.General.Interactables
 
         private void SceneManagerOnSceneLoaded(Scene scene, LoadSceneMode loadSceneMode) //Wenn die Szene geladen wurde
         {
-            Debug.Log($"threp {scene.name}");
             if (scene.name == Scene)
             {
                 StartCoroutine(activatingCoroutine(scene));
