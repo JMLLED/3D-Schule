@@ -1,0 +1,239 @@
+fileFormatVersion: 2
+guid: 8f6262e66e45b2b49a75abf2f557cd31
+timeCreated: 1530207172
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: CORPUS
+    100002: Corpus
+    100004: Querstreben
+    100006: "R\xF6hre_1"
+    100008: "R\xF6hre_1_0"
+    100010: "R\xF6hre_1_0_2"
+    100012: "R\xF6hre_1_0_3"
+    100014: "R\xF6hre_1_1"
+    100016: "R\xF6hre_1_1_2"
+    100018: "R\xF6hre_1_1_3"
+    100020: "R\xF6hre_1_2"
+    100022: "R\xF6hre_1_2_2"
+    100024: "R\xF6hre_1_2_3"
+    100026: "R\xF6hre_1_2_4"
+    100028: "R\xF6hre_1_3"
+    100030: "R\xF6hre_1_3_2"
+    100032: "R\xF6hre_1_3_3"
+    100034: "R\xF6hre_1_3_4"
+    100036: "R\xF6hre_1_4"
+    100038: "R\xF6hre_1_4_2"
+    100040: "R\xF6hre_1_4_3"
+    100042: "R\xF6hre_1_5"
+    100044: "R\xF6hre_1_5_2"
+    100046: "R\xF6hre_1_5_3"
+    100048: "R\xF6hre_1_6"
+    100050: "R\xF6hre_1_6_2"
+    100052: "R\xF6hre_1_6_3"
+    100054: "R\xF6hre_1_copies"
+    100056: "R\xF6hre_1_copies_0"
+    100058: "R\xF6hre_1_copies_1"
+    100060: "R\xF6hre_1_copies_copies"
+    100062: //RootNode
+    100064: "T\xFCren"
+    400000: CORPUS
+    400002: Corpus
+    400004: Querstreben
+    400006: "R\xF6hre_1"
+    400008: "R\xF6hre_1_0"
+    400010: "R\xF6hre_1_0_2"
+    400012: "R\xF6hre_1_0_3"
+    400014: "R\xF6hre_1_1"
+    400016: "R\xF6hre_1_1_2"
+    400018: "R\xF6hre_1_1_3"
+    400020: "R\xF6hre_1_2"
+    400022: "R\xF6hre_1_2_2"
+    400024: "R\xF6hre_1_2_3"
+    400026: "R\xF6hre_1_2_4"
+    400028: "R\xF6hre_1_3"
+    400030: "R\xF6hre_1_3_2"
+    400032: "R\xF6hre_1_3_3"
+    400034: "R\xF6hre_1_3_4"
+    400036: "R\xF6hre_1_4"
+    400038: "R\xF6hre_1_4_2"
+    400040: "R\xF6hre_1_4_3"
+    400042: "R\xF6hre_1_5"
+    400044: "R\xF6hre_1_5_2"
+    400046: "R\xF6hre_1_5_3"
+    400048: "R\xF6hre_1_6"
+    400050: "R\xF6hre_1_6_2"
+    400052: "R\xF6hre_1_6_3"
+    400054: "R\xF6hre_1_copies"
+    400056: "R\xF6hre_1_copies_0"
+    400058: "R\xF6hre_1_copies_1"
+    400060: "R\xF6hre_1_copies_copies"
+    400062: //RootNode
+    400064: "T\xFCren"
+    2100000: Mat.1
+    2100002: silver_carpaint
+    2100004: Mat
+    2100006: No Name
+    2300000: Corpus
+    2300002: Querstreben
+    2300004: "R\xF6hre_1"
+    2300006: "R\xF6hre_1_0"
+    2300008: "R\xF6hre_1_0_2"
+    2300010: "R\xF6hre_1_0_3"
+    2300012: "R\xF6hre_1_1"
+    2300014: "R\xF6hre_1_1_2"
+    2300016: "R\xF6hre_1_1_3"
+    2300018: "R\xF6hre_1_2"
+    2300020: "R\xF6hre_1_2_2"
+    2300022: "R\xF6hre_1_2_3"
+    2300024: "R\xF6hre_1_2_4"
+    2300026: "R\xF6hre_1_3"
+    2300028: "R\xF6hre_1_3_2"
+    2300030: "R\xF6hre_1_3_3"
+    2300032: "R\xF6hre_1_3_4"
+    2300034: "R\xF6hre_1_4"
+    2300036: "R\xF6hre_1_4_2"
+    2300038: "R\xF6hre_1_4_3"
+    2300040: "R\xF6hre_1_5"
+    2300042: "R\xF6hre_1_5_2"
+    2300044: "R\xF6hre_1_5_3"
+    2300046: "R\xF6hre_1_6"
+    2300048: "R\xF6hre_1_6_2"
+    2300050: "R\xF6hre_1_6_3"
+    2300052: "T\xFCren"
+    3300000: Corpus
+    3300002: Querstreben
+    3300004: "R\xF6hre_1"
+    3300006: "R\xF6hre_1_0"
+    3300008: "R\xF6hre_1_0_2"
+    3300010: "R\xF6hre_1_0_3"
+    3300012: "R\xF6hre_1_1"
+    3300014: "R\xF6hre_1_1_2"
+    3300016: "R\xF6hre_1_1_3"
+    3300018: "R\xF6hre_1_2"
+    3300020: "R\xF6hre_1_2_2"
+    3300022: "R\xF6hre_1_2_3"
+    3300024: "R\xF6hre_1_2_4"
+    3300026: "R\xF6hre_1_3"
+    3300028: "R\xF6hre_1_3_2"
+    3300030: "R\xF6hre_1_3_3"
+    3300032: "R\xF6hre_1_3_4"
+    3300034: "R\xF6hre_1_4"
+    3300036: "R\xF6hre_1_4_2"
+    3300038: "R\xF6hre_1_4_3"
+    3300040: "R\xF6hre_1_5"
+    3300042: "R\xF6hre_1_5_2"
+    3300044: "R\xF6hre_1_5_3"
+    3300046: "R\xF6hre_1_6"
+    3300048: "R\xF6hre_1_6_2"
+    3300050: "R\xF6hre_1_6_3"
+    3300052: "T\xFCren"
+    4300000: "R\xF6hre_1"
+    4300002: "R\xF6hre_1_0"
+    4300004: "R\xF6hre_1_1"
+    4300006: "R\xF6hre_1_2"
+    4300008: "R\xF6hre_1_3"
+    4300010: "R\xF6hre_1_4"
+    4300012: "R\xF6hre_1_5"
+    4300014: "R\xF6hre_1_6"
+    4300016: "R\xF6hre_1_2_2"
+    4300018: "R\xF6hre_1_0_2"
+    4300020: "R\xF6hre_1_1_2"
+    4300022: "R\xF6hre_1_2_3"
+    4300024: "R\xF6hre_1_3_2"
+    4300026: "R\xF6hre_1_4_2"
+    4300028: "R\xF6hre_1_5_2"
+    4300030: "R\xF6hre_1_6_2"
+    4300032: "R\xF6hre_1_3_3"
+    4300034: "R\xF6hre_1_0_3"
+    4300036: "R\xF6hre_1_1_3"
+    4300038: "R\xF6hre_1_2_4"
+    4300040: "R\xF6hre_1_3_4"
+    4300042: "R\xF6hre_1_4_3"
+    4300044: "R\xF6hre_1_5_3"
+    4300046: "R\xF6hre_1_6_3"
+    4300048: Querstreben
+    4300050: Corpus
+    4300052: "T\xFCren"
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
