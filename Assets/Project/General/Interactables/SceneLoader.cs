@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace Project.General.Interactables
@@ -16,17 +15,11 @@ namespace Project.General.Interactables
 
         private void SceneManagerOnSceneLoaded(Scene scene, LoadSceneMode loadSceneMode) //Wenn die Szene geladen wurde
         {
-            if (scene.name == Scene)
+            if (Scene.EndsWith(scene.name))
             {
-                StartCoroutine(activatingCoroutine(scene));
+                SceneManager.SetActiveScene(scene); //Wird sie "aktiv" gemacht, damit sie im Vordergrund ist
                 SceneManager.sceneLoaded -= SceneManagerOnSceneLoaded;
             }
-        }
-
-        private IEnumerator activatingCoroutine(Scene scene)
-        {
-            yield return new WaitForEndOfFrame();
-            SceneManager.SetActiveScene(scene); //Wird sie "aktiv" gemacht, damit sie im Vordergrund ist
         }
     }
 }

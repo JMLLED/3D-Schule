@@ -29,7 +29,6 @@ namespace Project.Games.CountryQuiz
 
             greyTex.SetPixels(tex.texture.GetPixels()
                 .Select(color => new Color(color.grayscale - 0.1f, color.grayscale - 0.1f, color.grayscale - 0.1f, color.a)).ToArray()); //Jeder der Pixel in der neuen Textur ist der glaiche Pixel wir in der alten Textur bloß grau
-            greyTex.alphaIsTransparency = true;
             greyTex.Apply();    //Die Textur wird gespeichert
 
             return Sprite.Create(greyTex, tex.rect, tex.pivot); //Und es wird ein Sprite daraus gemacht
